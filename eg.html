@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <style>
+            #o{
+                display:block;
+            }
+        </style>
+        <script>
+            function fun(o)
+            {
+                var ol=document.getElementById(o);
+                //var div=document.createElement("div");
+                
+                var button=document.createElement("button");
+                button.setAttribute("onclick","fun2(this,'"+ o +"')");
+                var buttonText=document.createTextNode("Click to Collapse");
+
+                //button.setAttribute("type","button");
+                button.appendChild(buttonText);
+                ol.parentNode.insertBefore(button,ol);
+                //div.appendChild(button);
+               
+            }
+            function fun2(button,o){
+                var ol2=document.getElementById(o);
+                //if(ol2){
+                    if(ol2.style.display=="none"){
+                        ol2.style.display="block";
+                        button.childNodes[0].data="Click to Collapse";
+                        button.style.backgroundColor = 'yellow';
+                    }
+                    else{
+                        ol2.style.display="none";
+                        button.childNodes[0].data="Click to Expand";
+                        button.style.backgroundColor = 'white';
+                        button.style.color="red";
+                    }
+              //  }
+
+            }
+            function fun1(p1)
+            {
+                document.getElementById(p1).innerHTML="New";
+            }
+        </script>
+    </head>
+    <body onload="fun('o')">      
+        
+        <ol id="o">
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Milk</li>
+        </ol>
+        
+        <p id="p1">This is an example for collapse and expand</p>
+    </body>
+</html>

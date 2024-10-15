@@ -1,0 +1,179 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+}
+
+.Wrap{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+.ingredient{
+   width: 150px;
+   height: 200px;
+   background-color: whitesmoke;
+   
+   font-size: 5px;
+   border-radius: 8px;
+   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+   display: flex;
+   justify-content: space-between;
+   flex-direction: column;
+   align-items: center;
+   padding: 20px;
+   margin: 20px;
+   transition: 0.5s;
+}
+
+.ingredient:hover{
+  width: 165px;
+  height: 250px;
+  background-color: rgb(165, 162, 162);
+}
+
+.ingredient img{
+  height: 80px;
+  width: 100px;
+  border-radius: 10px;
+  margin: 10px;
+
+}
+
+.ingredient p{
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.ingredient span{
+  font-size: 12px;
+}
+
+.Steps{
+  overflow-y: scroll;
+  position: relative;
+  top: 30px;
+  visibility: hidden;
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.ingredient:hover .Steps{
+  visibility: initial;
+  top: 0px;
+  opacity: 1;
+}
+
+.search-wrap{
+  display: flex;
+  justify-content: space-between;
+  height: 30px;
+}
+
+
+.search-wrap input{
+  height: 20px;
+  width: 250px;
+  border-radius: 10px;
+  padding: 10px;
+  border: 0px;
+  font-weight: 700;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.but{
+  margin-left: 20px;
+}
+
+.search-wrap button{
+  border: 0px;
+  border-radius: 10px;
+  color: black;
+  font-weight: 700;
+  background-color: whitesmoke;
+  transition: 0.5s;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: auto 20px;
+  height: 40px;
+  width: 100px;
+  text-align: center;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.search-wrap button:hover{
+  background-color: rgb(58, 55, 55);
+  color: white;
+  box-shadow: 0 1px 4px rgba(129, 126, 126, 0.5);
+}
+
+
+
+
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.heading{
+  color: whitesmoke;
+}
+
+.select-class{
+  height: 40px;
+  font-weight: 700;
+  border: 0px;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+option{
+  font-weight: 700;
+}
+
+.recipeName{
+  font-weight: bold;
+  font-size: 20px;
+  color: #264e59;
+}
+
+.Steps p{
+  font-size: 10px;
+}
+
+.ingreBut{
+  border: 2px;
+  border-radius: 10px;
+  background-color: bisque;
+}
